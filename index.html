@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dushant Raja — DevOps, Networking &amp; Web Development</title>
+<meta name="description" content="Dushant Raja is a DevOps engineer, network specialist and web developer helping teams ship reliable infrastructure, resilient networks, and fast websites.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%230A0E12'/%3E%3Ccircle cx='50' cy='50' r='16' fill='%234FD8C4'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="grain"></div>
+
+<!-- NAV -->
+<header class="nav" id="nav">
+  <a href="#top" class="nav-mark">
+    <span class="nav-dot" aria-hidden="true"></span>
+    DUSHANT<span class="accent">.</span>RAJA
+  </a>
+  <nav class="nav-links" aria-label="Primary">
+    <a href="#about">about</a>
+    <a href="#services">services</a>
+    <a href="#work">work</a>
+    <a href="#contact">contact</a>
+  </nav>
+  <a href="#contact" class="nav-cta">get in touch</a>
+  <button class="nav-burger" id="navBurger" aria-label="Toggle menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+</header>
+
+<!-- HERO -->
+<section class="hero" id="top">
+  <div class="hero-inner">
+    <div class="terminal" id="terminal" role="img" aria-label="Terminal boot sequence showing services coming online">
+      <div class="terminal-bar">
+        <span class="dot red"></span><span class="dot amber"></span><span class="dot green"></span>
+        <span class="terminal-title">status.sh</span>
+      </div>
+      <div class="terminal-body" id="terminalBody"></div>
+    </div>
+
+    <span class="hero-kicker">DevOps Engineer &amp; Network Specialist</span>
+    <h1 class="hero-title">
+      Reliable infrastructure,<br>
+      resilient networks,<br>
+      <span class="accent">production-ready</span> web.
+    </h1>
+    <p class="hero-sub">
+      I'm Dushant Raja. I design and operate the systems that keep businesses
+      online — from CI/CD pipelines and cloud infrastructure to network
+      architecture and the websites running on top of it.
+    </p>
+    <div class="hero-actions">
+      <a href="#contact" class="btn btn-primary">Start a project</a>
+      <a href="#services" class="btn btn-ghost">View services</a>
+    </div>
+  </div>
+
+  <!-- Signature: network diagram -->
+  <div class="node-map" aria-hidden="true">
+    <svg viewBox="0 0 640 640" id="nodeSvg">
+      <defs>
+        <radialGradient id="coreGlow" cx="50%" cy="50%" r="50%">
+          <stop offset="0%" stop-color="#4FD8C4" stop-opacity="0.55"/>
+          <stop offset="100%" stop-color="#4FD8C4" stop-opacity="0"/>
+        </radialGradient>
+      </defs>
+
+      <circle cx="320" cy="320" r="120" fill="url(#coreGlow)"/>
+
+      <!-- connecting lines -->
+      <line class="link" x1="320" y1="320" x2="320" y2="100"/>
+      <line class="link" x1="320" y1="320" x2="130" y2="440"/>
+      <line class="link" x1="320" y1="320" x2="510" y2="440"/>
+
+      <!-- traveling pulses -->
+      <circle class="pulse" r="4" cx="320" cy="320">
+        <animateMotion dur="2.4s" repeatCount="indefinite" path="M320,320 L320,100"/>
+      </circle>
+      <circle class="pulse" r="4" cx="320" cy="320">
+        <animateMotion dur="2.8s" begin="0.4s" repeatCount="indefinite" path="M320,320 L130,440"/>
+      </circle>
+      <circle class="pulse" r="4" cx="320" cy="320">
+        <animateMotion dur="2.6s" begin="0.8s" repeatCount="indefinite" path="M320,320 L510,440"/>
+      </circle>
+
+      <!-- core node -->
+      <circle cx="320" cy="320" r="46" class="node core-node"/>
+      <text x="320" y="316" class="node-label core-label">DR</text>
+      <text x="320" y="334" class="node-sub">core</text>
+
+      <!-- three service nodes -->
+      <g>
+        <circle cx="320" cy="100" r="34" class="node"/>
+        <text x="320" y="105" class="node-icon">⌘</text>
+        <text x="320" y="152" class="node-caption">DevOps</text>
+      </g>
+      <g>
+        <circle cx="130" cy="440" r="34" class="node"/>
+        <text x="130" y="445" class="node-icon">◉</text>
+        <text x="130" y="492" class="node-caption">Networking</text>
+      </g>
+      <g>
+        <circle cx="510" cy="440" r="34" class="node"/>
+        <text x="510" y="445" class="node-icon">◈</text>
+        <text x="510" y="492" class="node-caption">Web</text>
+      </g>
+    </svg>
+  </div>
+</section>
+
+<!-- MARQUEE STRIP -->
+<div class="strip" aria-hidden="true">
+  <div class="strip-track">
+    <span>UPTIME 99.9%</span><span>·</span>
+    <span>CI/CD</span><span>·</span>
+    <span>DOCKER</span><span>·</span>
+    <span>KUBERNETES</span><span>·</span>
+    <span>AWS</span><span>·</span>
+    <span>ROUTING &amp; SWITCHING</span><span>·</span>
+    <span>FIREWALLS</span><span>·</span>
+    <span>REACT</span><span>·</span>
+    <span>NODE.JS</span><span>·</span>
+    <span>LINUX</span><span>·</span>
+    <span>UPTIME 99.9%</span><span>·</span>
+    <span>CI/CD</span><span>·</span>
+    <span>DOCKER</span><span>·</span>
+    <span>KUBERNETES</span><span>·</span>
+    <span>AWS</span><span>·</span>
+    <span>ROUTING &amp; SWITCHING</span><span>·</span>
+    <span>FIREWALLS</span><span>·</span>
+    <span>REACT</span><span>·</span>
+    <span>NODE.JS</span><span>·</span>
+    <span>LINUX</span><span>·</span>
+  </div>
+</div>
+
+<!-- ABOUT + STATS -->
+<section class="about" id="about">
+  <div class="about-grid">
+    <div class="about-copy">
+      <span class="eyebrow">// about</span>
+      <h2>One engineer, the full stack of infrastructure.</h2>
+      <p>
+        Most teams split DevOps, networking, and web development across three
+        vendors — and lose time in the handoffs between them. I work across
+        all three, so the pipeline that deploys your code, the network it runs
+        on, and the site your customers see are designed to work together
+        from day one.
+      </p>
+      <p>
+        My approach is documentation-first and rollback-ready: every change
+        comes with a plan for what happens if it doesn't go as expected.
+      </p>
+    </div>
+    <div class="stats-grid">
+      <div class="stat">
+        <span class="stat-number">6<small>+</small></span>
+        <span class="stat-label">Years of experience</span>
+      </div>
+      <div class="stat">
+        <span class="stat-number">40<small>+</small></span>
+        <span class="stat-label">Infrastructure &amp; web projects delivered</span>
+      </div>
+      <div class="stat">
+        <span class="stat-number">99.9<small>%</small></span>
+        <span class="stat-label">Average uptime across managed systems</span>
+      </div>
+      <div class="stat">
+        <span class="stat-number">&lt;1<small>hr</small></span>
+        <span class="stat-label">Typical response time on active issues</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="services" id="services">
+  <div class="section-head">
+    <span class="eyebrow">// services</span>
+    <h2>What I deliver.</h2>
+    <p class="section-sub">Three disciplines, applied together: infrastructure that stays up, a network that stays fast, and a site that performs under real traffic.</p>
+  </div>
+
+  <div class="service-grid">
+    <article class="service-card">
+      <div class="service-icon">⌘</div>
+      <h3>DevOps</h3>
+      <p>CI/CD pipelines, containerization, and infrastructure-as-code so deploys stop being an event and start being routine.</p>
+      <ul class="service-list">
+        <li>Docker &amp; Kubernetes orchestration</li>
+        <li>CI/CD pipelines (GitHub Actions, Jenkins, GitLab CI)</li>
+        <li>Cloud infrastructure — AWS / Azure / GCP</li>
+        <li>Monitoring, logging &amp; alerting</li>
+        <li>Infrastructure as Code — Terraform, Ansible</li>
+      </ul>
+    </article>
+
+    <article class="service-card">
+      <div class="service-icon">◉</div>
+      <h3>Networking</h3>
+      <p>Networks designed for predictable performance under load, with security and uptime built in from the start.</p>
+      <ul class="service-list">
+        <li>LAN / WAN design &amp; implementation</li>
+        <li>Routing &amp; switching (Cisco, MikroTik)</li>
+        <li>Firewall configuration &amp; network security</li>
+        <li>VPN setup &amp; remote access</li>
+        <li>Network troubleshooting &amp; performance tuning</li>
+      </ul>
+    </article>
+
+    <article class="service-card">
+      <div class="service-icon">◈</div>
+      <h3>Web Development</h3>
+      <p>Fast, responsive sites built on the same infrastructure discipline that keeps them online — well after launch day.</p>
+      <ul class="service-list">
+        <li>Responsive front-end — HTML, CSS, JavaScript</li>
+        <li>Back-end &amp; API development</li>
+        <li>Performance optimization</li>
+        <li>Deployment &amp; hosting setup</li>
+        <li>Ongoing maintenance &amp; support</li>
+      </ul>
+    </article>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section class="process" id="process">
+  <div class="section-head">
+    <span class="eyebrow">// process</span>
+    <h2>How a project actually moves.</h2>
+  </div>
+
+  <ol class="process-list">
+    <li class="process-step">
+      <span class="step-index">01</span>
+      <div>
+        <h3>Discover</h3>
+        <p>Understand what you're running today — infra, network topology, or codebase — and where it breaks under pressure.</p>
+      </div>
+    </li>
+    <li class="process-step">
+      <span class="step-index">02</span>
+      <div>
+        <h3>Design</h3>
+        <p>Architecture and a plan you can read: what changes, why, and what happens if something goes wrong.</p>
+      </div>
+    </li>
+    <li class="process-step">
+      <span class="step-index">03</span>
+      <div>
+        <h3>Deploy</h3>
+        <p>Ship in stages with rollback paths ready. No surprise Friday-night outages.</p>
+      </div>
+    </li>
+    <li class="process-step">
+      <span class="step-index">04</span>
+      <div>
+        <h3>Monitor</h3>
+        <p>Dashboards and alerts so issues get caught before your users notice — not after.</p>
+      </div>
+    </li>
+  </ol>
+</section>
+
+<!-- WORK -->
+<section class="work" id="work">
+  <div class="section-head">
+    <span class="eyebrow">// selected work</span>
+    <h2>Recent builds.</h2>
+    <p class="section-sub">Swap these for your own case studies — placeholders included so the layout is ready to go.</p>
+  </div>
+
+  <div class="work-grid">
+    <article class="work-card">
+      <div class="work-tag">DevOps</div>
+      <h3>CI/CD pipeline for a microservices platform</h3>
+      <p>Cut deployment time from 40 minutes to under 5 with a Dockerized pipeline and automated rollback checks.</p>
+      <div class="work-meta"><span>Docker</span><span>GitHub Actions</span><span>AWS ECS</span></div>
+    </article>
+    <article class="work-card">
+      <div class="work-tag">Networking</div>
+      <h3>Office network redesign &amp; hardening</h3>
+      <p>Rebuilt a flat network into segmented VLANs with firewall policies, cutting incident response time significantly.</p>
+      <div class="work-meta"><span>VLANs</span><span>Firewall</span><span>Site-to-site VPN</span></div>
+    </article>
+    <article class="work-card">
+      <div class="work-tag">Web</div>
+      <h3>Business site rebuild for performance</h3>
+      <p>Rebuilt a legacy site as a fast, responsive front end with a lean back end, load time cut by more than half.</p>
+      <div class="work-meta"><span>JavaScript</span><span>Node.js</span><span>Nginx</span></div>
+    </article>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="testimonials" id="testimonials">
+  <div class="section-head">
+    <span class="eyebrow">// feedback</span>
+    <h2>What clients say.</h2>
+  </div>
+  <div class="testimonial-grid">
+    <figure class="testimonial-card">
+      <blockquote>“Our deployments went from a stressful, manual process to something the team barely thinks about anymore. That's the goal.”</blockquote>
+      <figcaption>
+        <span class="t-name">Placeholder Client</span>
+        <span class="t-role">Engineering Lead, Company Name</span>
+      </figcaption>
+    </figure>
+    <figure class="testimonial-card">
+      <blockquote>“Rebuilt our office network without a single day of downtime. Explained every decision in plain language along the way.”</blockquote>
+      <figcaption>
+        <span class="t-name">Placeholder Client</span>
+        <span class="t-role">Operations Manager, Company Name</span>
+      </figcaption>
+    </figure>
+    <figure class="testimonial-card">
+      <blockquote>“The site is faster than anything we've had before, and support after launch has been just as reliable as the build itself.”</blockquote>
+      <figcaption>
+        <span class="t-name">Placeholder Client</span>
+        <span class="t-role">Founder, Company Name</span>
+      </figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+  <div class="contact-inner">
+    <div class="contact-left">
+      <span class="eyebrow">// contact</span>
+      <h2>Let's discuss your project.</h2>
+      <p>Share what you're running today and what needs to change. You'll get a clear response with next steps — no sales pitch, just a plan.</p>
+      <div class="contact-info">
+        <a href="mailto:hello@dushantraja.dev">hello@dushantraja.dev</a>
+        <a href="tel:+910000000000">+91 00000 00000</a>
+        <div class="social-row">
+          <a href="#" aria-label="GitHub">GitHub</a>
+          <a href="#" aria-label="LinkedIn">LinkedIn</a>
+        </div>
+      </div>
+    </div>
+
+    <form class="contact-form" id="contactForm">
+      <div class="form-row">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" required autocomplete="name">
+      </div>
+      <div class="form-row">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required autocomplete="email">
+      </div>
+      <div class="form-row">
+        <label for="service">What do you need?</label>
+        <select id="service" name="service">
+          <option value="devops">DevOps</option>
+          <option value="networking">Networking</option>
+          <option value="web">Web development</option>
+          <option value="other">Not sure yet</option>
+        </select>
+      </div>
+      <div class="form-row">
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="4" required></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary btn-block">Send message</button>
+      <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
+    </form>
+  </div>
+</section>
+
+<footer class="footer">
+  <span>© <span id="year"></span> Dushant Raja</span>
+  <span class="footer-status"><span class="ping"></span> all systems operational</span>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
