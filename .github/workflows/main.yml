@@ -1,22 +1,41 @@
-name: Upload Website
+name: Deploy Multi-Bucket Website
 
 on:
-  push:
-    branches:
-      - main
+  push:
+    branches:
+      - main
+      - dev
 
 jobs:
-  deploy:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout Repository
-        uses: actions/checkout@v4
 
-      - name: Configure AWS Credentials
-        uses: aws-actions/configure-aws-credentials@v4
-        with:
-          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
-          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          aws-region: us-east-1 
-      - name: Deploy static site to S3 bucket
-        run: aws s3 sync . s3://dushant-raja --delete --exclude ".git/*" --exclude ".github/*"
+  deploy-prod:
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      
+      - uses: aws-actions/configure-aws-credentials@v4
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: us-east-1
+
+      - name: Sync to Prod Bucket
+        run: aws s3 sync . s3://dushant-prod-bucket --delete --exclude ".git/*" --exclude ".github/*"
+
+
+  deploy-dev:
+    if: github.ref == 'refs/heads/dev'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      
+      - uses: aws-actions/configure-aws-credentials@v4
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: us-east-1
+
+      - name: Sync to Dev Bucket
+        run: aws s3 sync . s3://dushant-dev-bucket --delete --exclude ".git/*" --exclude ".github/*"
+
